@@ -1,7 +1,7 @@
 FROM python:3.10-bullseye AS poetry
 RUN pip install poetry
 WORKDIR /code
-COPY pyproject.toml poetry.lock /code
+COPY pyproject.toml poetry.lock ./
 RUN poetry export -f requirements.txt --output requirements.txt
 
 FROM python:3.10-bullseye
