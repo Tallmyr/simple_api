@@ -3,6 +3,7 @@ from starlite import Controller, get
 
 class LogicController(Controller):
     path = "/logic"
+    tags = ["Logic"]
 
     @get(["/isodd/{number:int}"])
     def is_odd(self, number: int) -> bool:
