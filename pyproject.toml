@@ -8,7 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 uvicorn = "^0.18.2"
-starlite = "^1.5.3"
+starlite = {version = "^1.5.3", extras = ["testing"]}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
