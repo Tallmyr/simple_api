@@ -3,6 +3,7 @@ from starlite import Controller, ValidationException, get
 
 class MathsController(Controller):
     path = "/maths"
+    tags = ["Maths"]
 
     @get(["/add"])
     def add_numbers(self, first: int, second: int) -> int:
