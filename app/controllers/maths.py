@@ -1,4 +1,4 @@
-from starlite import Controller, ValidationException, get
+from starlite import Controller, Parameter, ValidationException, get
 
 
 class MathsController(Controller):
@@ -14,7 +14,7 @@ class MathsController(Controller):
         return first - second
 
     @get(["/multiply"])
-    def multiply_numbers(self, first: int, second: int) -> int:
+    def multiply_numbers(self, first: int, second: int = Parameter(gt=0)) -> int:
         return first * second
 
     @get(["/divide"])
