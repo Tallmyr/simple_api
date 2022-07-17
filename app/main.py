@@ -7,6 +7,6 @@ from app.controllers.morse import MorseController
 app = Starlite(
     route_handlers=[MathsController, LogicController, MorseController],
     openapi_config=OpenAPIConfig(
-        create_examples=True, title="Boomi Sample API's", version="1.0.0"
+        create_examples=True, title="Boomi Sample API's", version="1.1.0"
     ),
 )
