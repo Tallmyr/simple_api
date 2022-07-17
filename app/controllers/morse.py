@@ -6,7 +6,7 @@ from app.models import morse
 
 class MorseController(Controller):
     path = "/morse"
-    tags = ["morse"]
+    tags = ["Morse"]
 
     @post(["/text_to_morse"])
     def text_to_morse(self, data: morse.TextInput) -> morse.Morse:
